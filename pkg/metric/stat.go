@@ -19,6 +19,7 @@ func MonitorStatFunc(ctx context.Context, client *api.Client, uids []string) {
 			continue
 		}
 		followerMetric.WithLabelValues(uid).Set(float64(res.Follower))
+		time.Sleep(10*time.Millisecond)
 	}
 }
 
