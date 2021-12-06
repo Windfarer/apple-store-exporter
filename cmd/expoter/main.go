@@ -7,9 +7,9 @@ import (
 	"net/http"
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"github.com/xuzhenglun/apple-store-exporter/pkg/api"
-	"github.com/xuzhenglun/apple-store-exporter/pkg/config"
-	"github.com/xuzhenglun/apple-store-exporter/pkg/metric"
+	"github.com/Windfarer/powerup-follower-exporter/pkg/api"
+	"github.com/Windfarer/powerup-follower-exporter/pkg/config"
+	"github.com/Windfarer/powerup-follower-exporter/pkg/metric"
 )
 
 var (

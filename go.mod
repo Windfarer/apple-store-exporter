@@ -1,4 +1,4 @@
-module github.com/xuzhenglun/apple-store-exporter
+module github.com/Windfarer/powerup-follower-exporter
 
 go 1.17
 

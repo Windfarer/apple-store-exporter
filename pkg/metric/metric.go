@@ -4,15 +4,15 @@ import "github.com/prometheus/client_golang/prometheus"
 
 func init() {
 	prometheus.MustRegister(
-		stockMetricMetric,
+		followerMetric,
 	)
 }
 
 var (
-	stockMetricMetric = prometheus.NewGaugeVec(prometheus.GaugeOpts{
-		Namespace: "apple_store",
+	followerMetric = prometheus.NewGaugeVec(prometheus.GaugeOpts{
+		Namespace: "bb",
 		Subsystem: "exporter",
-		Name:      "fulfillment_messages",
+		Name:      "follower",
 		Help:      "",
-	}, []string{"shop", "model"})
+	}, []string{"uid"})
 )

@@ -18,8 +18,7 @@ type Config struct {
 	Timeout  time.Duration `json:"timeout" yaml:"timeout"`
 
 	Interval time.Duration `json:"interval" yaml:"interval"`
-	Shops    []string      `json:"shops" yaml:"shops"`
-	Models   []string      `json:"models" yaml:"models"`
+	Uids     []string      `json:"uids" yaml:"uids"`
 }
 
 func NewConfig() (*Config, error) {
@@ -30,7 +29,7 @@ func NewConfig() (*Config, error) {
 
 	res := Config{}
 	if err = yaml.Unmarshal(file, &res); err != nil {
-		return nil, fmt.Errorf("load config failed, %w",err)
+		return nil, fmt.Errorf("load config failed, %w", err)
 	}
 
 	res.Default()
@@ -40,7 +39,7 @@ func NewConfig() (*Config, error) {
 
 func (c *Config) Default() {
 	if len(c.Endpoint) == 0 {
-		c.Endpoint = "https://www.apple.com.cn"
+		c.Endpoint = "http://api.bilibili.com"
 	}
 
 	if c.Timeout.Seconds() <= 0 {

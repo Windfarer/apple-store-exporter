@@ -66,12 +66,3 @@ func (c *Client) do(ctx context.Context, method, url string, params url.Values, 
 
 	return nil
 }
-
-type Response struct {
-	Head struct {
-		Status string      `json:"status"`
-		Data   interface{} `json:"data"`
-	} `json:"head"`
-
-	Body interface{} `json:"body"`
-}
